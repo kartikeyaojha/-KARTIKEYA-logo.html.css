@@ -1,1 +1,1 @@
-# -KARTIKEYA-logo.html.css
+This project includes the HTML and CSS code for creating the KARTIKEYA logo. It demonstrates clean, responsive design principles and serves as a foundation for integrating the logo into web applications or websites. Perfect for branding and customization.

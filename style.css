@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.logo {
+    display: flex;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 5rem;
+    transform-style: preserve-3d;
+    perspective: 500px;
+}
+
+.letter {
+    color: #0093f5;
+    position: relative;
+    margin: 0 10px;
+    display: inline-block;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.letter:hover {
+    transform: rotateX(180deg) rotateY(180deg);
+    color: #ff0101;
+}
+
+.letter::before, .letter::after {
+    content: attr(data-content);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #ffffff0c;
+    opacity: 0.5;
+    transition: transform 0.3s ease-in-out;
+}
+
+.letter:hover::before {
+    transform: translateZ(-10px);
+}
+
+.letter:hover::after {
+    transform: translateZ(10px);
+}
